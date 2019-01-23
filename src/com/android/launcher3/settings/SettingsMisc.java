@@ -58,6 +58,9 @@ import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
 import com.android.systemui.shared.system.BlurUtils;
 
+import com.android.launcher3.lineage.LineageUtils;
+import com.android.launcher3.lineage.trust.TrustAppsActivity;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -79,6 +82,7 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
     public static final String EXTRA_SHOW_FRAGMENT_ARGS = ":settings:show_fragment_args";
     private static final int DELAY_HIGHLIGHT_DURATION_MILLIS = 600;
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
+    public static final String KEY_TRUST_APPS = "pref_trust_apps";
 
     @VisibleForTesting
     static final String EXTRA_FRAGMENT = ":settings:fragment";
@@ -284,6 +288,16 @@ public class SettingsMisc extends CollapsingToolbarBaseActivity
                     return updateDeveloperOption();
                 case Utilities.KEY_BLUR_DEPTH:
                     return BlurUtils.supportsBlursOnWindows();
+                case KEY_TRUST_APPS:
+                    preference.setOnPreferenceClickListener(p -> {
+                        LineageUtils.showLockScreen(getActivity(),
+                                getString(R.string.trust_apps_manager_name), () -> {
+                            Intent intent = new Intent(getActivity(), TrustAppsActivity.class);
+                            startActivity(intent);
+                        });
+                        return true;
+                    });
+                    return true;
             }
 
             return true;

@@ -19,6 +19,10 @@
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.launcher3">
 
+    <Preference
+        android:key="pref_trust_apps"
+        android:title="@string/trust_apps_manager_name" />
+    
     <SwitchPreference
         android:key="pref_allowRotation"
         android:title="@string/allow_rotation_title"
