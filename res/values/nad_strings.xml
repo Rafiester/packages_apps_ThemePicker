@@ -157,4 +157,8 @@
     <!-- Memory info -->
     <string name="meminfo_text">%1$s | %2$s</string>
     <string name="recents_meminfo_title">Memory info</string>
+
+    <!-- Suggestions -->
+    <string name="suggestion_pref_screen_title">Suggestions</string>
+    <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
 </resources>
