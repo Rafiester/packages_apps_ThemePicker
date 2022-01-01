@@ -61,6 +61,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
     public static final String EXTRA_SHOW_FRAGMENT_ARGS = ":settings:show_fragment_args";
     private static final int DELAY_HIGHLIGHT_DURATION_MILLIS = 600;
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
+    private static final String DT2S_PREFERENCE_KEY = "pref_dt_gesture";
 
     @VisibleForTesting
     static final String EXTRA_FRAGMENT = ":settings:fragment";
@@ -105,6 +106,7 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity
             case Utilities.KEY_SEARCH_RADIUS:
             case Utilities.KEY_SHOW_HOTSEAT_BG:
             case Utilities.KEY_STATUS_BAR:
+            case DT2S_PREFERENCE_KEY:
                 LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                 break;
             default:
