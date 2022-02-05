@@ -15,10 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <color name="disabled_text_color">#66000000</color> <!-- 38% black -->
-    
-    <!-- Appseat -->
-    <color name="appseat_color">#50181c1f</color>
-
-    <color name="mid_clear_all_background_color">@*android:color/system_neutral2_0</color>
+    <!-- Overview scrolling scale animation -->
+    <dimen name="overview_scroll_scale">0.9</dimen>
 </resources>
