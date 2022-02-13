@@ -41,10 +41,9 @@
 
     <dimen name="noqsb_hotseat_bottom_non_tall_padding">0dp</dimen>
     <dimen name="noqsb_hotseat_extra_vertical_size">34dp</dimen>
-    <dimen name="qsb_g_icon_marginStart">16dp</dimen>
     <dimen name="noqsb_hotseat_top_padding">8dp</dimen>
     <dimen name="noqsb_hotseat_bottom_padding">2dp</dimen>
-    <dimen name="qsb_widget_height">64dp</dimen>
+    <dimen name="qsb_widget_height">61dp</dimen>
     <dimen name="qsb_icon_width">56dp</dimen>
     <dimen name="qsb_icon_padding">10dp</dimen>
     <dimen name="qsb_widget_vertical_padding">6dp</dimen>
