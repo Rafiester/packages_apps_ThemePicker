@@ -161,4 +161,7 @@
     <!-- Suggestions -->
     <string name="suggestion_pref_screen_title">Suggestions</string>
     <string name="suggestion_pref_screen_desc">For All Apps &amp; Home screen suggestions</string>
+
+    <!-- Row Height -->
+    <string name="row_height_title">Row height</string>
 </resources>
