@@ -217,6 +217,7 @@ android_app {
     required: [
         "privapp_whitelist_com.android.launcher3",
         "privapp_whitelist_com.android.launcher3-ext",
+        "default_permissions_com.android.launcher3.xml",
     ],
 
     jacoco: {
@@ -357,6 +358,7 @@ android_app {
     required: [
         "privapp_whitelist_com.android.launcher3",
         "privapp_whitelist_com.android.launcher3-ext",
+        "default_permissions_com.android.launcher3.xml",
     ],
 
     additional_manifests: [
@@ -394,6 +396,7 @@ android_app {
     required: [
         "privapp_whitelist_com.android.launcher3",
         "privapp_whitelist_com.android.launcher3-ext",
+        "default_permissions_com.android.launcher3.xml",
     ],
 
     resource_dirs: ["quickstep/res"],
@@ -449,6 +452,7 @@ android_app {
     required: [
         "privapp_whitelist_com.android.launcher3",
         "privapp_whitelist_com.android.launcher3-ext",
+        "default_permissions_com.android.launcher3.xml",
     ],
 
     additional_manifests: [
@@ -472,3 +476,10 @@ prebuilt_etc {
     filename_from_src: true,
 }
 
+prebuilt_etc {
+    name: "default_permissions_com.android.launcher3.xml",
+    src: "default_permissions_com.android.launcher3.xml",
+    system_ext_specific: true,
+    filename_from_src: true,
+    sub_dir: "default-permissions",
+}
