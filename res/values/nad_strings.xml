@@ -143,7 +143,6 @@
     <string name="pref_dt_gesture_title">Double tap gesture</string>
     <string name="pref_dt_gesture_summary">Double tap on empty space for screen-off</string>
 
-
     <!-- Trust apps -->
     <string name="trust_apps_manager_name">Hidden &amp; Protected apps</string>
     <string name="trust_apps_auth_manager">Unlock to manage the hidden and protected apps</string>
@@ -171,4 +170,8 @@
     <!-- Taskbar -->
     <string name="pref_allow_phone_taskbar_title">Use taskbar</string>
     <string name="pref_allow_phone_taskbar_summary">For opening and switching apps anywhere</string>
+   
+    <!-- Kill App recents action shortcut -->
+    <string name="recent_task_option_kill_app">Kill</string>
+    <string name="recents_app_killed">App killed</string>
 </resources>
