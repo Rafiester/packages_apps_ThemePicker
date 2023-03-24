@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import com.android.launcher3.BuildConfig;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.util.ComponentKey;
 
 public class IconDatabase {
@@ -17,7 +18,7 @@ public class IconDatabase {
     public static final String VALUE_DEFAULT = "";
 
     public static String getGlobal(Context context) {
-        return Utilities.getPrefs(context).getString(KEY_ICON_PACK, VALUE_DEFAULT);
+        return LauncherPrefs.getPrefs(context).getString(KEY_ICON_PACK, VALUE_DEFAULT);
     }
 
     public static String getGlobalLabel(Context context) {
@@ -37,11 +38,11 @@ public class IconDatabase {
     }
 
     public static void setGlobal(Context context, String value) {
-        Utilities.getPrefs(context).edit().putString(KEY_ICON_PACK, value).apply();
+        LauncherPrefs.getPrefs(context).edit().putString(KEY_ICON_PACK, value).apply();
     }
 
     public static void resetGlobal(Context context) {
-        Utilities.getPrefs(context).edit().remove(KEY_ICON_PACK).apply();
+        LauncherPrefs.getPrefs(context).edit().remove(KEY_ICON_PACK).apply();
     }
 
     public static String getByComponent(Context context, ComponentKey key) {

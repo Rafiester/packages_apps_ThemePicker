@@ -18,6 +18,7 @@ import android.view.animation.Interpolator;
 import androidx.annotation.AnyThread;
 
 import com.android.launcher3.Utilities;
+import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.Workspace;
 import com.android.launcher3.anim.Interpolators;
 
@@ -53,7 +54,7 @@ public class WallpaperOffsetInterpolator extends BroadcastReceiver implements
         mWorkspace = workspace;
         mIsRtl = Utilities.isRtl(workspace.getResources());
         mHandler = new OffsetHandler(workspace.getContext());
-        SharedPreferences prefs = Utilities.getPrefs(workspace.getContext());
+        SharedPreferences prefs = LauncherPrefs.getPrefs(workspace.getContext());
         mAllowScrolling = prefs.getBoolean(KEY_WALLPAPER_SCROLLING, true);
         prefs.registerOnSharedPreferenceChangeListener(this);
     }
